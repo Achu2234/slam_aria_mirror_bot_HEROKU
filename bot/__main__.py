@@ -47,7 +47,7 @@ def stats(update, context):
             f'<b>├  🎮 RAM : {memory}%</b>\n' \
             f'<b>├  💽 DISK : {disk}%</b>\n' \
             f'<b>│</b>\n' \
-            f'<b>╰──「 🚸 @AT_BOTs 🚸 」</b>'
+            f'<b>╰──「 🚸 @AmiFutami 🚸 」</b>'
     update.effective_message.reply_photo(IMAGE_URL, stats, parse_mode=ParseMode.HTML)
 
 
@@ -57,8 +57,8 @@ This bot can mirror all your links to Google Drive!
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
     buttons = button_build.ButtonMaker()
-    buttons.buildbutton("Repo", "https://github.com/ayushteke/slam_aria_mirror_bot_HEROKU")
-    buttons.buildbutton("Support Group", "https://t.me/AT_BOTs_support")
+    buttons.buildbutton("Bot Ownner", "https://t.me/AmiFutami")
+    buttons.buildbutton("Leech Group", "https://t.me/joinchat/sfi8Wo2P0Y83OWFl")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     LOGGER.info('UID: {} - UN: {} - MSG: {}'.format(update.message.chat.id, update.message.chat.username, update.message.text))
     uptime = get_readable_time((time.time() - botStartTime))
@@ -68,7 +68,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
         else :
             update.effective_message.reply_photo(IMAGE_URL, start_string, parse_mode=ParseMode.MARKDOWN, reply_markup=reply_markup)
     else :
-        sendMessage(f"Oops! you are not allowed to use me.", context.bot, update)
+        sendMessage(f"Oops! you are not allowed to use me join https://t.me/joinchat/sfi8Wo2P0Y83OWFl for leeching.", context.bot, update)
 
 
 def restart(update, context):
